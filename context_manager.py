@@ -1,0 +1,142 @@
+from collections import deque
+
+
+# -------------------------
+# Config
+# -------------------------
+MAX_HISTORY = 10  # how many turns to remember
+
+
+class ContextManager:
+
+    def __init__(self):
+
+        # Sliding window of past turns
+        self.history = deque(maxlen=MAX_HISTORY)
+
+        # Accumulated slots across conversation
+        self.slots = {}
+
+        # Most recent intent + entities
+        self.last_intent   = None
+        self.last_entities = {}
+        self.last_message  = None
+
+    # -------------------------
+    # Save latest interaction
+    # -------------------------
+    def update_context(self, intent: str, entities: dict, message: str):
+
+        # Build turn object
+        turn = {
+            "message" : message,
+            "intent"  : intent,
+            "entities": entities
+        }
+
+        # Add to history window
+        self.history.append(turn)
+
+        # Update last turn
+        self.last_intent   = intent
+        self.last_entities = entities
+        self.last_message  = message
+
+        # Merge new entities into running slots
+        # New values overwrite old ones for the same key
+        self.slots.update(entities)
+
+    # -------------------------
+    # Return current context
+    # -------------------------
+    def get_context(self):
+
+        return {
+            "last_intent"   : self.last_intent,
+            "last_entities" : self.last_entities,
+            "last_message"  : self.last_message,
+            "slots"         : dict(self.slots),
+            "history"       : list(self.history)
+        }
+
+    # -------------------------
+    # Get last N turns
+    # -------------------------
+    def get_recent_history(self, n: int = 3):
+
+        turns = list(self.history)
+        return turns[-n:] if len(turns) >= n else turns
+
+    # -------------------------
+    # Check if slot exists
+    # -------------------------
+    def get_slot(self, key: str):
+
+        return self.slots.get(key, None)
+
+    # -------------------------
+    # Resolve pronouns / references
+    # -------------------------
+    def resolve_reference(self, text: str) -> dict:
+
+        text_lower = text.lower()
+        resolved   = {}
+
+        # "it", "that", "this" → inherit last intent + entities
+        vague_refs = ["it", "that", "this", "the same"]
+
+        if any(ref in text_lower.split() for ref in vague_refs):
+            if self.last_intent:
+                resolved["intent"]   = self.last_intent
+                resolved["entities"] = self.last_entities.copy()
+
+        return resolved
+
+    # -------------------------
+    # Detect follow-up
+    # -------------------------
+    def is_follow_up(self, text: str) -> bool:
+
+        follow_up_phrases = [
+            "make it",
+            "change it",
+            "instead",
+            "do that",
+            "update it",
+            "again",
+            "same thing",
+            "like before",
+            "but make",
+            "actually",
+            "wait no",
+            "no make it",
+            "switch it to"
+        ]
+
+        text_lower = text.lower()
+
+        return any(phrase in text_lower for phrase in follow_up_phrases)
+
+    # -------------------------
+    # Clear everything
+    # -------------------------
+    def clear_context(self):
+
+        self.history.clear()
+        self.slots         = {}
+        self.last_intent   = None
+        self.last_entities = {}
+        self.last_message  = None
+
+    # -------------------------
+    # Debug view
+    # -------------------------
+    def summary(self) -> str:
+
+        lines = [
+            f"History  : {len(self.history)} turns",
+            f"Slots    : {self.slots}",
+            f"Last     : {self.last_intent} — {self.last_message}"
+        ]
+
+        return "\n".join(lines)

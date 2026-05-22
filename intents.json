@@ -5,7 +5,37 @@
       "start a timer for 10 minutes",
       "begin a 30 second timer",
       "count down from 20 minutes",
-      "set a countdown for 1 hour"
+      "set a countdown for 1 hour",
+      "give me a 15 minute timer",
+      "start counting down from 45 seconds",
+      "can you set a 2 minute timer",
+      "timer for 3 minutes please",
+      "set a 90 second countdown",
+      "start a one hour timer",
+      "begin countdown for 25 minutes",
+      "i need a timer for 8 minutes",
+      "set timer 20 minutes",
+      "countdown 5 minutes"
+    ]
+  },
+
+  "cancel_timer": {
+    "examples": [
+      "cancel the timer",
+      "stop the timer",
+      "turn off the timer",
+      "kill the countdown",
+      "nevermind on the timer",
+      "stop counting down",
+      "end the timer",
+      "disable the timer",
+      "get rid of the timer",
+      "forget the timer",
+      "abort the countdown",
+      "pause the timer",
+      "clear the timer",
+      "remove the timer",
+      "i dont need the timer anymore"
     ]
   },
 
@@ -15,7 +45,17 @@
       "remind me tomorrow morning",
       "remind me to call mom",
       "create a reminder for homework",
-      "remind me at 8 tonight"
+      "remind me at 8 tonight",
+      "set a reminder for my meeting",
+      "remind me to take my medicine at noon",
+      "add a reminder for 7am",
+      "dont let me forget to eat lunch",
+      "remind me about practice after school",
+      "schedule a reminder for tonight",
+      "remind me in 30 minutes",
+      "set an alert for 9pm",
+      "i need a reminder for tomorrow",
+      "remind me to study later"
     ]
   },
 
@@ -25,7 +65,57 @@
       "start spotify",
       "play some chill music",
       "put on a song",
-      "play my playlist"
+      "play my playlist",
+      "play something relaxing",
+      "i want to listen to music",
+      "put on some background music",
+      "start playing music",
+      "queue up some songs",
+      "play lo-fi",
+      "put on my study playlist",
+      "start some tunes",
+      "play music on spotify",
+      "turn on some music"
+    ]
+  },
+
+  "pause_music": {
+    "examples": [
+      "pause the music",
+      "stop the song",
+      "pause spotify",
+      "hold the music",
+      "stop playing",
+      "mute the music",
+      "pause this track",
+      "stop the track",
+      "hold on pause this",
+      "can you pause that",
+      "freeze the music",
+      "halt playback",
+      "pause for a second",
+      "stop music please",
+      "put music on pause"
+    ]
+  },
+
+  "skip_song": {
+    "examples": [
+      "skip this song",
+      "next song",
+      "skip to the next track",
+      "play the next one",
+      "i dont like this song skip it",
+      "next track please",
+      "change the song",
+      "skip this",
+      "go to next",
+      "forward the song",
+      "move to the next song",
+      "skip ahead",
+      "next please",
+      "i want a different song",
+      "skip track"
     ]
   },
 
@@ -33,9 +123,279 @@
     "examples": [
       "search for ai news",
       "look up quantum physics",
-      "google something",
-      "search the web",
-      "find information about space"
+      "google something for me",
+      "search the web for recipes",
+      "find information about space",
+      "look up the weather in tokyo",
+      "search for how to learn python",
+      "find me articles about machine learning",
+      "can you google that",
+      "look that up for me",
+      "search online for the best laptops",
+      "find information on black holes",
+      "look up the definition of entropy",
+      "search for latest tech news",
+      "browse the web for tutorials"
+    ]
+  },
+
+  "open_app": {
+    "examples": [
+      "open spotify",
+      "launch chrome",
+      "open discord",
+      "start up youtube",
+      "open the calculator",
+      "launch vs code",
+      "open my browser",
+      "start discord",
+      "pull up youtube",
+      "open file explorer",
+      "launch the terminal",
+      "open notepad",
+      "start up chrome",
+      "open settings",
+      "launch the app"
+    ]
+  },
+
+  "close_app": {
+    "examples": [
+      "close spotify",
+      "shut down chrome",
+      "close discord",
+      "exit youtube",
+      "close the browser",
+      "kill vs code",
+      "close this app",
+      "shut down the terminal",
+      "exit out of that",
+      "close the window",
+      "terminate the program",
+      "quit the application",
+      "close everything",
+      "shut it down",
+      "exit the app"
+    ]
+  },
+
+  "get_weather": {
+    "examples": [
+      "whats the weather like",
+      "is it going to rain today",
+      "what is the temperature outside",
+      "how hot is it today",
+      "check the weather for me",
+      "will it rain tomorrow",
+      "whats the forecast",
+      "is it cold outside",
+      "tell me the weather",
+      "what should i wear today",
+      "how is the weather looking",
+      "weather update please",
+      "is it sunny today",
+      "give me the forecast for tomorrow",
+      "weather check"
+    ]
+  },
+
+  "take_note": {
+    "examples": [
+      "take a note",
+      "write this down",
+      "note this for me",
+      "save this idea",
+      "remember this",
+      "jot this down",
+      "make a note that",
+      "write a note saying",
+      "log this thought",
+      "save a memo",
+      "add to my notes",
+      "record this",
+      "keep a note of this",
+      "write it down",
+      "note to self"
+    ]
+  },
+
+  "ask_question": {
+    "examples": [
+      "what is machine learning",
+      "how does gravity work",
+      "explain quantum computing",
+      "who invented the internet",
+      "what is the meaning of life",
+      "how do black holes form",
+      "tell me about the solar system",
+      "what is python used for",
+      "how does the brain work",
+      "can you explain recursion",
+      "what causes thunder",
+      "how do airplanes fly",
+      "what is a neural network",
+      "tell me something interesting",
+      "explain how the internet works"
+    ]
+  },
+
+  "system_volume": {
+    "examples": [
+      "turn up the volume",
+      "make it louder",
+      "lower the volume",
+      "turn it down",
+      "set volume to 50 percent",
+      "increase the sound",
+      "decrease the volume",
+      "mute the system",
+      "unmute the audio",
+      "volume up",
+      "volume down",
+      "make it quieter",
+      "crank up the sound",
+      "set volume to max",
+      "reduce the sound"
+    ]
+  },
+
+  "system_brightness": {
+    "examples": [
+      "turn up the brightness",
+      "make the screen brighter",
+      "lower the brightness",
+      "dim the screen",
+      "set brightness to 80 percent",
+      "increase screen brightness",
+      "decrease brightness",
+      "make the screen darker",
+      "brighten the display",
+      "screen brightness up",
+      "brightness down",
+      "max brightness please",
+      "dim the display",
+      "reduce screen brightness",
+      "adjust the brightness"
+    ]
+  },
+
+  "send_message": {
+    "examples": [
+      "send a message to mom",
+      "text my friend",
+      "message john saying ill be late",
+      "send a text to sarah",
+      "tell my brother im on my way",
+      "shoot a message to the group chat",
+      "send a whatsapp to dad",
+      "message my teacher",
+      "text someone for me",
+      "send a quick message",
+      "drop a message to alex",
+      "reach out to my contact",
+      "send a note to my friend",
+      "message them and say yes",
+      "tell her ill call later"
+    ]
+  },
+
+  "stop_cancel": {
+    "examples": [
+      "stop",
+      "cancel",
+      "nevermind",
+      "forget it",
+      "abort",
+      "never mind that",
+      "disregard that",
+      "ignore what i said",
+      "cancel that command",
+      "stop what youre doing",
+      "quit it",
+      "no stop",
+      "actually never mind",
+      "cancel everything",
+      "forget what i just said"
+    ]
+  },
+
+  "greet": {
+    "examples": [
+      "hey jarvis",
+      "hello",
+      "hi there",
+      "good morning jarvis",
+      "whats up jarvis",
+      "yo jarvis",
+      "hey",
+      "good evening",
+      "hello jarvis",
+      "hi jarvis",
+      "wake up jarvis",
+      "hey are you there",
+      "good afternoon",
+      "jarvis you there",
+      "hey buddy"
+    ]
+  },
+
+  "how_are_you": {
+    "examples": [
+      "how are you",
+      "how are you doing",
+      "you good",
+      "hows it going",
+      "are you okay",
+      "how do you feel",
+      "whats up with you",
+      "how have you been",
+      "you doing alright",
+      "everything good with you",
+      "hows your day going",
+      "are you functioning well",
+      "how are things",
+      "you feeling okay",
+      "all good on your end"
+    ]
+  },
+
+  "tell_time": {
+    "examples": [
+      "what time is it",
+      "tell me the time",
+      "whats the current time",
+      "do you know what time it is",
+      "give me the time",
+      "what time is it right now",
+      "can you check the time",
+      "time check",
+      "what hour is it",
+      "clock check",
+      "is it morning or night",
+      "how late is it",
+      "what time do we have",
+      "current time please",
+      "tell me the current time"
+    ]
+  },
+
+  "tell_date": {
+    "examples": [
+      "what is todays date",
+      "what day is it",
+      "tell me the date",
+      "whats today",
+      "what month are we in",
+      "what year is it",
+      "give me todays date",
+      "date check",
+      "what day of the week is it",
+      "is today monday",
+      "tell me what day it is",
+      "current date please",
+      "whats the date today",
+      "what is the current date",
+      "today is what day"
     ]
   }
 }
