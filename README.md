@@ -143,3 +143,8 @@ python3 test.py
 ## Author
 
 Built by David Mishael — a high school student teaching himself AI systems, NLP, and software architecture through iterative project building.
+
+
+
+## Small bugs comits
+Project repository successfully initialized.
