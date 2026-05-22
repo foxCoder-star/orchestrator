@@ -1,0 +1,41 @@
+{
+  "set_timer": {
+    "examples": [
+      "set a timer for 5 minutes",
+      "start a timer for 10 minutes",
+      "begin a 30 second timer",
+      "count down from 20 minutes",
+      "set a countdown for 1 hour"
+    ]
+  },
+
+  "create_reminder": {
+    "examples": [
+      "remind me at 6pm",
+      "remind me tomorrow morning",
+      "remind me to call mom",
+      "create a reminder for homework",
+      "remind me at 8 tonight"
+    ]
+  },
+
+  "play_music": {
+    "examples": [
+      "play music",
+      "start spotify",
+      "play some chill music",
+      "put on a song",
+      "play my playlist"
+    ]
+  },
+
+  "web_search": {
+    "examples": [
+      "search for ai news",
+      "look up quantum physics",
+      "google something",
+      "search the web",
+      "find information about space"
+    ]
+  }
+}
